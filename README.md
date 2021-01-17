@@ -2,8 +2,8 @@
 
 # about
 
-this project is displays a table with COVID-19 info on countries, by clicking on lastFiveDays column for each country
-Api call will be made to retrieve last five days info, and will put it in Cache (IndexedDb was chosen as a cache), if this info already exist in cache api call will not be executed.
+This project is displays a table with COVID-19 info on each country, by clicking on lastFiveDays column of a country
+Api call will be made to retrieve last five days info, and will put it in Cache (indexDb was chosen as a cache), if this info already exist in cache api call will not be executed.
 ## Available Scripts
 
 In the project directory, you can run:
