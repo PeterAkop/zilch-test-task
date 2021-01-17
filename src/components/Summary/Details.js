@@ -47,9 +47,7 @@ const Details = ({ data, onClose, id = 'summary' }) => {
                                     })}
                                 </ul>
                                 <span>source : {data.source}</span>
-                                <span style={{ color: 'white' }}>
-                                    click outside to close!
-                                </span>
+                                <span>click outside to close!</span>
                             </>
                         )}
                     </div>
