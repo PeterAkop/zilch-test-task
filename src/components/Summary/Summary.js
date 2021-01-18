@@ -36,13 +36,7 @@ const Summary = () => {
         ),
         LastFiveDays: v => {
             const handleLastFiveDays = () => {
-                console.log(v, ' @@@ v @@@')
-                const { Country } = v;
-                try {
-                     getLatestFive(Country, setDetails);
-                } catch (error) {
-                    alert('something went wrong with Api request or Cache');
-                }
+                getLatestFive(v.Country, setDetails);
             };
             return (
                 <button className={styles.button} onClick={handleLastFiveDays}>

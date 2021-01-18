@@ -21,24 +21,28 @@ export const getLatestFive = (country, callBack) => {
     let date = moment().format('YYYY-MM-DD');
     date = `${country}-${date}`;
 
-    Cache.get(date).then(daysFromCache => {
-        if (!daysFromCache) {
-            getLastFiveDays(country).then(days => {
-                Cache.insert({ date, days }).then(
-                    () =>
-                        callBack &&
-                        callBack({
-                            elements: days,
-                            source: 'from api request',
-                        }),
-                );
-            });
-        } else {
-            callBack &&
-                callBack({
-                    elements: daysFromCache.days,
-                    source: 'from cache',
-                });
-        }
-    });
+    Cache.get(date)
+        .then(daysFromCache => {
+            if (!daysFromCache) {
+                getLastFiveDays(country)
+                    .then(days => {
+                        Cache.insert({ date, days }).then(
+                            () =>
+                                callBack &&
+                                callBack({
+                                    elements: days,
+                                    source: 'from api request',
+                                }),
+                        );
+                    })
+                    .catch(error => callBack({ error: error.message }));
+            } else {
+                callBack &&
+                    callBack({
+                        elements: daysFromCache.days,
+                        source: 'from cache',
+                    });
+            }
+        })
+        .catch(error => callBack({ error: error.message }));
 };

@@ -7,7 +7,7 @@ import styles from './summary.module.scss';
 
 const Details = ({ data, onClose, id = 'summary' }) => {
     const ref = useRef();
-
+    console.log(data, '@@ data', data.error ? 'yes' : 'no');
     useEffect(() => {
         const handleClickOutside = ({ target }) => {
             if (ref && !ref.current.contains(target)) {
@@ -25,7 +25,8 @@ const Details = ({ data, onClose, id = 'summary' }) => {
             {createPortal(
                 <div className={styles.details} ref={ref}>
                     <div>
-                        {data && (
+                        {data && data.error && <span>{data.error}</span>}
+                        {data && !data.error && (
                             <>
                                 <span>
                                     Country : {data.elements[0].Country}
