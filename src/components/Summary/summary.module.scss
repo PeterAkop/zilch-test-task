@@ -1,62 +1,62 @@
 .wrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    display: flex;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
 }
 
 .details {
-    pointer-events: none;
-    position: absolute;
-    min-width: 400px;
-    > div {
-        background-color: wheat;
-        font-size: 12px;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 5px;
-        box-shadow: whitesmoke;
-        border-radius: 3px;
-        > ul {
-            list-style-type: none;
-        }
+  pointer-events: none;
+  position: absolute;
+  min-width: 400px;
+  > div {
+    background-color: wheat;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    box-shadow: whitesmoke;
+    border-radius: 3px;
+    > ul {
+      list-style-type: none;
     }
+  }
 }
 
 .search {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    font-size: 13px;
-    align-items: center;
-    font-weight: bold;
-    > span {
-        padding-right: 5px;
-    }
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  font-size: 13px;
+  align-items: center;
+  font-weight: bold;
+  > span {
+    padding-right: 5px;
+  }
 }
 
 .newDeaths {
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    background-color: rgb(252, 61, 61);
-    color: white;
-    align-items: center;
-    border-radius: 3px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: rgb(252, 61, 61);
+  color: white;
+  align-items: center;
+  border-radius: 3px;
 }
 .newConfirmed {
-    height: 100%;
-    width: 100%;
-    justify-content: center;
-    display: flex;
-    background-color: #fdb03d61;
-    align-items: center;
-    border-radius: 3px;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  background-color: #fdb03d61;
+  align-items: center;
+  border-radius: 3px;
 }
 
 .button {
-    min-height: 30px;
+  min-height: 30px;
 }

@@ -7,6 +7,6 @@ const summaryCall = jest.fn();
 
 global.fetch = jest.fn(summaryCall);
 test('Summary end point should be called on component mount', () => {
-    render(<Home />);
-    expect(summaryCall).toHaveBeenCalled();
+  render(<Home />);
+  expect(summaryCall).toHaveBeenCalled();
 });

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import propTypes from 'prop-types';
 
 import styles from './table.module.scss';
-import { defaultPerPage } from './const';
+import { defaultPerPage } from './utils/enum';
 
 const Table = ({ rows, header, selFormatter, perPage = defaultPerPage }) => {
     const [pagination, setPagination] = useState();

@@ -2,9 +2,9 @@ import React, { useEffect, useState, useContext } from 'react';
 
 import styles from './summary.module.scss';
 import Table from '../Table/Table';
-import { prepareData, getLatestFive } from './helper';
+import { prepareData, getLatestFive } from './utils/helper';
 import DataContext from '../../pages/dataContext';
-import Details from './Details';
+import Details from './components/Details';
 
 const Summary = () => {
     const [innerData, setInnerData] = useState();
