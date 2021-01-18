@@ -9,17 +9,16 @@ const Details = ({ data, onClose, id = 'summary' }) => {
     const ref = useRef();
 
     useEffect(() => {
+        const handleClickOutside = ({ target }) => {
+            if (ref && !ref.current.contains(target)) {
+                onClose && onClose();
+            }
+        };
         document.addEventListener('mousedown', handleClickOutside);
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [data]);
-
-    const handleClickOutside = ({ target }) => {
-        if (ref && !ref.current.contains(target)) {
-            onClose && onClose();
-        }
-    };
+    }, [data, onClose]);
 
     return (
         <>

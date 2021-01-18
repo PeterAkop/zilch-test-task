@@ -36,9 +36,10 @@ const Summary = () => {
         ),
         LastFiveDays: v => {
             const handleLastFiveDays = () => {
+                console.log(v, ' @@@ v @@@')
                 const { Country } = v;
                 try {
-                    getLatestFive(Country, setDetails);
+                     getLatestFive(Country, setDetails);
                 } catch (error) {
                     alert('something went wrong with Api request or Cache');
                 }

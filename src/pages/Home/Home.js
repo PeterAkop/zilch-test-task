@@ -8,12 +8,15 @@ const Home = () => {
     const [data, setData] = useState();
     const [error, setError] = useState();
 
-    useEffect(async () => {
-        try {
-            await getSummary().then(data => setData(data));
-        } catch (error) {
-            setError('Something went wrong with Api request');
-        }
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                await getSummary().then(data => setData(data));
+            } catch (error) {
+                setError('Something went wrong with Api request');
+            }
+        };
+        fetchData();
     }, []);
 
     return (
