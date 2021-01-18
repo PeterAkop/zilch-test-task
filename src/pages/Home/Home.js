@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Container, Summary } from '../../components/index';
+import { Container, Summary } from '../../components';
 import { DataProvider } from '../dataContext';
 import { getSummary } from '../../api';
 
