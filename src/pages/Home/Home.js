@@ -8,9 +8,9 @@ const Home = () => {
     const [data, setData] = useState();
     const [error, setError] = useState();
 
-    useEffect(() => {
+    useEffect(async () => {
         try {
-            getSummary().then(data => setData(data));
+            await getSummary().then(data => setData(data));
         } catch (error) {
             setError('Something went wrong with Api request');
         }
