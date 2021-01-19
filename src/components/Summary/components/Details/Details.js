@@ -7,7 +7,7 @@ import styles from '../../summary.module.scss';
 
 const Details = ({ data, onClose, id = 'summary' }) => {
   const ref = useRef();
-  console.log(data, '@@ data', data.error ? 'yes' : 'no');
+
   useEffect(() => {
     const handleClickOutside = ({ target }) => {
       if (ref && !ref.current.contains(target)) {
